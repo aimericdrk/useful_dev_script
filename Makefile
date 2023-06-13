@@ -1,0 +1,2 @@
+ftests:
+	./tests/tester.sh

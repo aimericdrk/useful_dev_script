@@ -1,0 +1,15 @@
+[[test]]
+name = "test n°1"
+command = "./my_bin_to exec arg1 arg2"
+expected.stdout = 'result here'  //replace the line return by \n and tab by \t
+expected.stderr = ""
+expected.exit_code = 0
+[[test]]
+
+[[test]]
+name = "test n°2"
+command = "./my_bin_to exec arg3 arg4"
+expected.stdout = '--skip'  //you can put this to skip the verification of the stdout
+expected.stderr = ""
+expected.exit_code = 84
+[[test]]
