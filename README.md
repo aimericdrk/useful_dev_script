@@ -4,6 +4,7 @@
 - a project tester
 - a src finder
 - a proto finder
+- a bashrc
 
 --- 
 
@@ -25,3 +26,8 @@ is used for c and c++ in h and hpp respectively
 it is used to remove the implicit declaration by going throught each file in every folder and subfolder
 find every function and write in the console the proto of the function so you only have to copy paste it 
 in your .h or .hpp file 
+
+## the projtester :
+a bunch of shortcut to simplify the life and make it a bit more more prettyer
+<br>
+<br>
