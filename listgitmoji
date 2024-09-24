@@ -1,0 +1,92 @@
+#!/bin/bash
+
+declare -A GITMOJI_LIST=(
+    [:art:]="🎨 Improve structure / format of the code."
+    [:zap:]="⚡ Improve performance."
+    [:fire:]="🔥 Remove code or files."
+    [:bug:]="🐛 Fix a bug."
+    [:ambulance:]="🚑 Critical hotfix."
+    [:sparkles:]="✨ Introduce new features."
+    [:memo:]="📝 Add or update documentation."
+    [:rocket:]="🚀 Deploy stuff."
+    [:lipstick:]="💄 Add or update the UI and style files."
+    [:tada:]="🎉 Begin a project."
+    [:white_check_mark:]="✅ Add or update tests."
+    [:lock:]="🔒 Fix security issues."
+    [:apple:]="🍎 Fix something on macOS."
+    [:penguin:]="🐧 Fix something on Linux."
+    [:checkered_flag:]="🏁 Fix something on Windows."
+    [:robot:]="🤖 Fix something on Android."
+    [:green_apple:]="🍏 Fix something on iOS."
+    [:bookmark:]="🔖 Release / Version tags."
+    [:rotating_light:]="🚨 Remove linter warnings."
+    [:construction:]="🚧 Work in progress."
+    [:green_heart:]="💚 Fix CI Build."
+    [:arrow_down:]="⬇ Downgrade dependencies."
+    [:arrow_up:]="⬆ Upgrade dependencies."
+    [:pushpin:]="📌 Pin dependencies to specific versions."
+    [:construction_worker:]="👷 Add or update CI build system."
+    [:chart_with_upwards_trend:]="📈 Add or update analytics or track code."
+    [:recycle:]="♻ Refactor code."
+    [:whale:]="🐳 Work on Docker."
+    [:heavy_plus_sign:]="➕ Add a dependency."
+    [:heavy_minus_sign:]="➖ Remove a dependency."
+    [:wrench:]="🔧 Add or update configuration files."
+    [:globe_with_meridians:]="🌐 Internationalization and localization."
+    [:pencil2:]="✏ Fix typos."
+    [:poop:]="💩 Write bad code that needs to be improved."
+    [:rewind:]="⏪ Revert changes."
+    [:twisted_rightwards_arrows:]="🔀 Merge branches."
+    [:package:]="📦 Update compiled files or packages."
+    [:alien:]="👽 Update code due to external API changes."
+    [:truck:]="🚚 Move or rename files."
+    [:page_facing_up:]="📄 Add or update license."
+    [:boom:]="💥 Introduce breaking changes."
+    [:bento:]="🍱 Add or update assets."
+    [:ok_hand:]="👌 Due to code review changes."
+    [:wheelchair:]="♿ Improve accessibility."
+    [:bulb:]="💡 Add or update comments in source code."
+    [:beers:]="🍻 Writing code drunkenly."
+    [:speech_balloon:]="💬 Add or update text and literals."
+    [:card_file_box:]="�� Perform database related changes."
+    [:loud_sound:]="🔊 Add or update logs."
+    [:mute:]="🔇 Remove logs."
+    [:busts_in_silhouette:]="👥 Add or update contributor(s)."
+    [:children_crossing:]="🚸 Improve user experience / usability."
+    [:building_construction:]="🏗 Make architectural changes."
+    [:iphone:]="📱 Work on responsive design."
+    [:clown_face:]="🤡 Mock things."
+    [:egg:]="🥚 Add or update an easter egg."
+    [:see_no_evil:]="🙈 Add or update a .gitignore file."
+    [:camera_flash:]="📸 Add or update snapshots."
+    [:alembic:]="⚗ Try out experimental changes."
+    [:mag:]="🔍 Improve SEO."
+    [:wheel_of_dharma:]="☸ Work on Kubernetes."
+    [:label:]="🏷 Add or update types (Flow, TypeScript)."
+    [:seedling:]="🌱 Add or update seed files."
+    [:triangular_flag_on_post:]="🚩 Add, update, or remove feature flags."
+    [:goal_net:]="🥅 Catch errors."
+    [:dizzy:]="💫 Add or update animations and transitions."
+    [:wastebasket:]="🗑 Deprecate code that needs to be cleaned up."
+    [:passport_control:]="🛂 Work on sign in and sign up."
+    [:adhesive_bandage:]="🩹 Apply patches."
+    [:monocle_face:]="🧐 Review code."
+    [:coffin:]="⚰ Remove dead code."
+    [:test_tube:]="🧪 Add a failing test."
+    
+
+)
+
+
+search=$(echo "$1" | tr '[:upper:]' '[:lower:]') # Convert input to lowercase
+
+if [ -z "$1" ]; then
+    for key in "${!GITMOJI_LIST[@]}"; do
+        echo "$key - ${GITMOJI_LIST[$key]}"
+    done
+else
+    for key in "${!GITMOJI_LIST[@]}"; do
+        echo "$key - ${GITMOJI_LIST[$key]}" | grep -i "$1" 2>/dev/null
+    done
+fi
+return 0
