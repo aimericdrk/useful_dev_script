@@ -1,12 +1,29 @@
 <h1>here is a bunch of really useful script</h1>
 
 ## the scripts :
+- a fast gitmoji finder
 - a project tester
 - a src finder
 - a proto finder
 - a bashrc
 
 --- 
+
+
+## fast gitmoji finder :
+simply enter 
+```bash
+listgitmoji
+```
+and it will list you every gitmoji with the typical use or you can filter by typing
+```bash
+listgitmoji keywords
+```
+and you will see this : 
+![image](https://github.com/user-attachments/assets/a7916384-f021-4bc2-9356-f1b06b3e4af4)
+
+<br>
+<br>
 
 ## the projtester :
 you simply have to writer some tests on a file and run the test.sh 
