@@ -2,6 +2,7 @@
 
 ## the scripts :
 - a fast gitmoji finder
+- an extractor
 - a project tester
 - a src finder
 - a proto finder
@@ -23,6 +24,16 @@ and you will see this :
 
 <br>
 <br>
+
+## the extractor :
+simply by doing : 
+```bash
+extract file.zip
+extract file.rar
+extract file.tar.gz
+...
+```
+the script will decide how to extract it, simplifies the life a lot
 
 ## the projtester :
 you simply have to writer some tests on a file and run the test.sh 
