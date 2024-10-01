@@ -1,1 +1,1 @@
-grep -n "^[[:space:]]*\(\(char\|int\|void\)[[:space:]]\{0,\}\*\{0,\}[[:space:]]\{0,\}[a-zA-Z_][a-zA-Z0-9_]*\)[[:space:]_]*([^)]*)" `find -name "*.c" -type f -not -path '*/.*'` | sed 's/.*\/[^\/]*://; s/^[0-9]\+:\s*//; s/){/);/; s/}\s*$/;/; s/$/;/'
+grep -n "^[[:space:]]*\(\(char\|int\|void\)[[:space:]]\{0,\}\*\{0,\}[[:space:]]\{0,\}[a-zA-Z_][a-zA-Z0-9_]*\)[[:space:]_]*([^)]*)" `find -name "*.c" -or -name "*.cpp" -type f -not -path '*/.*'` | sed 's/.*\/[^\/]*://; s/^[0-9]\+:\s*//; s/){/);/; s/}\s*$/;/; s/$/;/'
