@@ -1,1 +1,1 @@
-find . -type f -name "*.c" | sed 's/^..//' | awk '{if(NR>1)print prev"\t\\"; prev=$0} END{print $0}' | awk '{printf "\t%s\n" , $0}'
+find . -type f -name "*.c" -or -name "*.cpp" | sed 's/^..//' | awk '{if(NR>1)print prev"\t\\"; prev=$0} END{print $0}' | awk '{printf "\t%s\n" , $0}'
