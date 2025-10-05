@@ -1,4 +1,24 @@
 #!/bin/bash
+
+# A simple test runner for the tests defined in ftest.toml
+# It reads the test definitions, runs the commands, and compares the output and exit codes.
+# Made by aimericdrk on github : https://github.com/aimericdrk/useful_dev_script/tree/main/tests
+# To use it, just put your tests in ftest.toml and run this script.
+# in the makefile you can add a rule like this :
+#
+# test:ftests:
+# 	chmod +x ./tests/tester.sh
+# 	./tests/tester.sh
+#
+# to write new tests follow the following format :
+# [[test]]
+# name = "test n°1"  // here you can put any name you want
+# command = "./problem_two < tests/test_sample_one.txt" // here you put the command (use \n for new line and \t for tab) to run your program with the argument or input files
+# expected.stdout = '4\n2'  // here you put the expected output of your program, use \n for new line and \t for tab
+# expected.stderr = "" // here you put the expected stderr of your program, use \n for new line and \t for tab, if you want to ignore stderr put --skip
+# expected.exit_code = 0 // here you put the expected exit code of your program
+# [[test]]
+
 FILE=tests/ftest.toml
 COUNT=0
 TOTAL=0
